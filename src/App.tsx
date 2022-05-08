@@ -21,7 +21,7 @@ const configuration = {
         token_endpoint: "https://demo.duendesoftware.com/connect/token",
         userinfo_endpoint: "https://demo.duendesoftware.com/connect/userinfo",
     },
-    service_worker_relative_url:'/csm-use-case-repository/csm-usecase-ui/OidcServiceWorker.js',
+    service_worker_relative_url:'/OidcServiceWorker.js',
     service_worker_only: false,
 };
 
@@ -32,7 +32,7 @@ class App extends React.Component<any, any> {
   render() {
     return (
       <div className="App">
-          <OidcProvider configuration={configuration} configurationName={configurationName}>
+          <OidcProvider configuration={configuration}>
               <Header aria-label="Exchange">
                 <HeaderName href="#" prefix="">
                   Exchange
